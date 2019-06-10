@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main()
+{
+	//cpc_tag:decl
+	int age;
+
+	//cpc_tag:input
+	scanf("Enter your age : %d", age);
+
+	return 0;
+}
