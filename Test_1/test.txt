@@ -1,12 +1,21 @@
 #include<stdio.h>
-
 int main()
 {
-	//cpc_tag:decl
-	int age;
+  //cpc tag: decl  
+  int a,b;
 
-	//cpc_tag:input
-	scanf("Enter your age : %d", age);
+  //cpc tag: in
+  scanf("%d", &a);
+  scanf(" %d", &b);
 
-	return 0;
+  //cpc tag: out arith
+  printf("%d\n", a+b);
+  printf("%d\n", a-b);
+  printf("%d\n", a*b);
+
+  //cpc tag: check out arith
+  if(b)
+    printf("%d\n", a/b);
+    
+  return 0;
 }

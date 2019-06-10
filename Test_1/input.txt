@@ -1,3 +1,0 @@
-scanf("enter your age : %d", age);
-return 0;
-}
