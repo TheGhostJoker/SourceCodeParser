@@ -1,1 +1,1 @@
-code_blocks = ['_decl', '_in', '_out_arith', '_check_out_arith']
+code_blocks = ['decl', 'in', 'out_arith', 'check_out_arith']

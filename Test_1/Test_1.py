@@ -1,6 +1,7 @@
 import os
 
 file = open('test.txt', 'r')
+rebuild_f = open('rebuild.c', 'w')
 code_blocks = []
 file1 = None
 fname = ''
@@ -10,7 +11,9 @@ for line in file:
 
     line = line.lower()
     line = line.strip()
-    print("> " + line)
+
+    # see the code as it is parsed, on the output screen
+    #print("> " + line)
 
     # keep writing data into the file until you reach the next tag
     if line.startswith("//cpc tag:"):
@@ -18,10 +21,10 @@ for line in file:
         if file1 is not None:
             file1.close()
 
-        fname = line[10:].replace(" ", "_")
-        print(fname+'\n')
-        file1 = open(fname + '.txt', 'w')
-
+        fname = line[11:].replace(" ", "_")
+        #print(fname+'\n')
+        file1 = open(fname + '.h', 'w')
+        rebuild_f.write('#include"' + fname + '.h' + '"\n')
         # adding a record to the list of blocks
         code_blocks.append(fname)
 
@@ -42,4 +45,6 @@ for ele in code_blocks:
     else:
         file1.write("'" + ele + "'" + ']')
     ctr += 1
+
 file1.close()
+rebuild_f.close()
