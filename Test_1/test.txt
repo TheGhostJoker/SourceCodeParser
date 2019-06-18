@@ -15,7 +15,7 @@ int main()
 
   //cpc tag: check out arith
   if(b)
-    printf("%d\n", a/b);
+    printf("%f\n", (float)a/b);
     
   return 0;
 }

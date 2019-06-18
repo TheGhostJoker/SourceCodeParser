@@ -1,4 +1,4 @@
 if(b)
-printf("%d\n", a/b);
+printf("%f\n", (float)a/b);
 return 0;
 }

@@ -6,6 +6,15 @@ code_blocks = []
 file1 = None
 fname = ''
 
+for line in file:
+    line = line.lower()
+    line = line.strip()
+    if not line.startswith("//cpc tag:"):
+        rebuild_f.write(line + '\n')
+    else:
+        break
+
+file.seek(0, 0)
 
 for line in file:
 
